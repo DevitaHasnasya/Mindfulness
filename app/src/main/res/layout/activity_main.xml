@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF8FB"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Time to Meditate"
+            android:textColor="#1A3668"
+            android:textSize="28sp"
+            android:fontFamily="sans-serif-medium" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:text="Take a breath,\nand easy your mind"
+            android:textColor="#707070"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.7">
+
+        <View
+            android:layout_width="500dp"
+            android:layout_height="600dp"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="-250dp"
+            android:background="@drawable/pink_bg" />
+
+        <ImageView
+            android:id="@+id/bg_opening"
+            android:layout_width="350dp"
+            android:layout_height="330dp"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="120dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/opening2" />
+
+    </FrameLayout>
+</LinearLayout>
