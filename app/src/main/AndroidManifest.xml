@@ -12,6 +12,36 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Tugas_besar">
         <activity
+            android:name=".Yoga"
+            android:exported="false" />
+        <activity
+            android:name=".ShoutOut"
+            android:exported="false" />
+        <activity
+            android:name=".BreathAnchorStart"
+            android:exported="false" />
+        <activity
+            android:name=".BreathAnchorRun"
+            android:exported="false" />
+        <activity
+            android:name=".FocusFlow"
+            android:exported="false" />
+        <activity
+            android:name=".DetailStress"
+            android:exported="false" />
+        <activity
+            android:name=".DetailInsomnia"
+            android:exported="false" />
+        <activity
+            android:name=".DetailAnxiety"
+            android:exported="false" />
+        <activity
+            android:name=".Mindfulness"
+            android:exported="false" />
+        <activity
+            android:name=".DetailMindfulness"
+            android:exported="false" />
+        <activity
             android:name=".Beranda"
             android:exported="false" />
         <activity

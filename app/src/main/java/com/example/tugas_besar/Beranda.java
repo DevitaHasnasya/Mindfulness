@@ -1,24 +1,44 @@
 package com.example.tugas_besar;
 
-import android.os.Bundle;
-
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+import androidx.cardview.widget.CardView;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
 
 public class Beranda extends AppCompatActivity {
+    CardView btnMindfulness, btnFocusFlow, btnYoga;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_beranda);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
+        btnYoga = findViewById(R.id.btnYoga);
+
+
+        btnMindfulness = findViewById(R.id.btnMindfulness);
+        btnFocusFlow = findViewById(R.id.btnFocusFlow);
+
+        btnMindfulness.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Beranda.this, Mindfulness.class);
+                startActivity(intent);
+            }
+        });
+        btnFocusFlow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Beranda.this, FocusFlow.class);
+                startActivity(intent);
+            }
+        });
+        btnYoga.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Beranda.this, Yoga.class);
+                startActivity(intent);
+            }
         });
     }
 }
